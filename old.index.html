@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" />   
+
+<!-- Site Information -->
+<title>Pixyte</title>
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 x=%22-.14em%22 font-size=%2295%22>🌆️</text></svg>">
+<meta name="description" content="Blogging, Open Source Apps for Windows/Android & much more.">
+<meta name="keywords" content="Open Source, Ressource Friendly, Simplified Blog">
+<meta name="author, publisher, copyright" content="bloodyeyesblackblood"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Auto Theme -->
+<meta name="supported-color-schemes" content="dark light">
+<meta name="color-scheme" content="dark light">
+
+<!-- Mobile URL Header Color -->
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="aliceblue">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="src/css/style.css">  
+</head><body><main>
+
+
+<nav role="navigation">
+		<a id="nlink" href="#" title="Home">P</a>
+		<a id="nlink" href="#" title="Blog">Today</a>
+			<form action="" method="get" class="search-container">
+					<input type="submit" id="search-submit" value="🔍️">
+					<input type="text" name="s" placeholder="Search" id="search-input" autocomplete="on" value="">
+			</form>
+		<a id="nlink" class="noti-button" href="#" title="Home">69</a>
+		<img id="profile-pic-preview-z" src="src/img/blank.webp"/>
+		<a id="nlink" href="#" title="Blog"><svg class="gUZ R19 U9O kVc" height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" fill="white"
+       fill-opacity="1"><path d="M12 19.5.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z"></path></svg></a>
+</nav>
+
+
+<div class="settings-site-container">
+<div class="settings-overview">
+<h2>Settings</h2>
+<input type="checkbox" id="checkbox_menu" class="custom-checkbox">
+<label for="checkbox_menu"></label>
+<div id="settings-overview-menu">
+<li><a href="#profile-setting" class="active">Your Profile</a></li>
+<li><a href="#account-management" class="">Account Management</a></li>
+<li><a href="#notification" class="">Notifications</a></li>
+<li><a href="#privacy-security" class="">Privacy & Security</a></li>
+</div>
+</div>
+
+<div class="settings-container">
+<div class="show-settings">
+
+	<div class="profile-pic-container">
+		<img id="profile-pic-preview" src="src/img/blank.webp"/>
+			<input type="file" accept="image/*" onchange="loadFile(event)" id="upload" hidden/>
+			<label for="upload"><img src="src/svg/upload-image-icon.svg"></label>
+	</div>
+
+	
+	
+	<div class="profile-username-container">
+	<h3>Username</h3>
+	<input id="input-username" type="text" placeholder="ReiWasHere">
+	<p>www.pixyte.com/ReiWasHere</p>
+	</div>
+	
+	<div class="profile-bio-container">
+	<h3>Bio</h3>
+	<textarea id="input-bio" cols="20" rows="5" wrap="hard" maxlength="155"></textarea>
+	</div>
+	
+	<div class="profile-gender-container">
+	<h3>Gender</h3>
+	<select name="input-website" id="input-website" form="carform">
+	<option value="gender_none">None</option>
+	<option value="gender_male">Male</option>
+	<option value="gender_female">Female</option>
+	<option value="gender_non_binary">Non-Binary</option>
+	<option value="gender_helicopter">Combat Helicopter</option>
+	</select>
+	</div>
+
+	<div class="profile-language-container">
+	<h3>Language</h3>
+	<select name="input-website" id="input-website" form="carform">
+	<option value="english">English</option>
+	<option value="german">German</option>
+	</select>
+	</div>
+	
+		<div class="profile-website-container">
+	<h3>Website</h3>
+	<input id="input-website" type="text" placeholder="Add a Link to your Website/Social Media/Imprint. ">
+	</div>
+</div>
+</div>
+
+<style>
+
+.form-control {
+  font-size: 1.2rem;
+  display:inline-flex;
+  justify-content: center;
+  align-content: center;
+  padding-left:10px;
+ 
+}
+
+.form-control input {
+  padding:10px !important;
+  margin-right:8px; 
+}
+
+fieldset {
+border: none;
+}
+
+
+
+
+</style>
+
+
+</div>
+
+
+
+
+
+</main>
+      <script>
+          var loadFile = function(event) {
+              var image = document.getElementById('profile-pic-preview');
+
+              image.src=URL.createObjectURL(event.target.files[0]);
+          };
+      </script>
+
+</body></html>

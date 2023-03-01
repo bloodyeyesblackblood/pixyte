@@ -1,0 +1,311 @@
+@font-face {
+	font-family: Inter;
+	font-weight: 300;
+	src: url("../fonts/inter/Inter-Light.woff2");
+  }
+  @font-face {
+	font-family: Inter;
+	font-weight: 400;
+	src: url("../fonts/inter/Inter-Regular.woff2");
+  }
+  @font-face {
+	font-family: Inter;
+	font-weight: 500;
+	src: url("../fonts/inter/Inter-Medium.woff2");
+  }
+  @font-face {
+	font-family: Inter;
+	font-weight: 600;
+	src: url("../fonts/inter/Inter-SemiBold.woff2");
+  }
+  @font-face {
+	font-family: Inter;
+	font-weight: 700;
+	src: url("../fonts/inter/Inter-Bold.woff2");
+  }
+  @font-face {
+	font-family: Inter;
+	font-weight: 800;
+	src: url("../fonts/inter/Inter-ExtraBold.woff2");
+  }
+  @font-face {
+	font-family: Inter;
+	font-weight: 900;
+	src: url("../fonts/inter/Inter-Black.woff2");
+  }
+	  
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+	  
+:root {
+	--background-color: 0, 0%, 5%; 
+	--foreground-color: 0, 0%, 0%;
+	--accent-color: 324, 94%, 65%;
+
+	--duration: 5s;
+
+	--search-auto-width: 42px;
+
+	--n-font: 1rem;
+
+	--column-count: 6;
+
+	--nav-height: 60px;
+}
+	  
+body {
+	background-color:  hsl(var(--background-color));
+	font-family: Inter, Arial;
+	color:hsl(var(--background-color));
+
+}
+
+main {
+	width: 100%;
+}
+	  
+input{
+	border-radius: 9em;
+	border: none;
+	padding-left: 16px;
+}
+  
+a {
+	cursor: pointer;
+	color: hsl(var(--accent-color));
+}
+	  
+a,p,li {
+	text-decoration:none;
+	list-style-type: none;
+}
+
+
+
+nav {
+	transition-duration: var(--duration);
+	background-color: hsl(0, 100%, 100%);
+	height: var(--nav-height);
+	width: 100%;
+}
+
+.nav-profile-container{
+	margin-right:12px;}
+
+nav svg{
+	margin-left: 3px;
+	padding: 5px;
+	height: 1.1em;
+	width: 1.1em;
+}
+
+svg {
+	fill:  hsl(var(--background-color));
+	font-size: 1.2em;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.home {
+	font-size: 1.2em;
+	font-weight: 900;
+	margin-left:12px;
+	padding: .8rem;
+	text-decoration: underline;
+}
+
+.nav-font {
+	font-size: 1rem;
+}
+
+.radius {
+	border-radius: 9em; 
+}
+	  
+.nav-link:hover, 
+.nav-link:focus-within {
+	background-color: hsla(var(--foreground-color), 50%); 
+
+}
+.profile-dropdown:hover, 
+.profile-dropdown:focus-within {
+	background-color: hsla(var(--accent-color), 40%); 
+}
+
+nav #profile-pic-preview-z {
+	height: 40px;
+	border-radius: .2em;
+}
+	  
+.search-container {
+	height: 35px; width:100%;
+	background-color: hsla(var(--accent-color), 14%);
+	position: relative;
+	margin: 0 12px;
+}
+  
+#search-submit,#search-input {
+	height: 100%;
+	background-color: transparent;
+	font: var(--n-font);
+} 
+
+#search-input{
+	width: calc(100% - var(--search-auto-width));
+} 
+
+#search-submit{
+	width: var(--search-auto-width);
+	float: left;
+}
+
+.notification  {
+	color:  white;
+	background-color: hsla(var(--accent-color), 80%);
+	padding: 6px;
+	margin-right: 12px;
+}
+  
+.content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+    column-count: var(--column-count);
+    gap: .4em;
+}
+
+.box {
+	position: relative;
+	height: 100%;
+	margin-top: .4em;
+}
+
+.box img {
+	display: block;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.box:nth-child(1){margin-top:0;}
+
+/* re-work this shit.
+#hover-interface {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
+
+	border-radius: 3px;
+	display: inline-flex;
+}
+
+#hover-interface:hover{background: rgba(0, 0, 0, 0.5);}
+
+#hover-interface div {
+	display: inline-flex;
+}
+
+#hover-interface:hover div{display: inline-flex;}
+
+#hover-interface #top {
+	top:0;
+}
+
+#hover-interface #bottom {
+	bottom:0;
+}
+
+#hover-interface * {
+	height: 5vh;
+	width: 100%;
+	position: absolute;
+
+}
+
+select, button {
+	width: auto !important;
+    padding: 8px;
+    border: none;
+    background-color: transparent;  
+	font-family: Inter;
+
+	margin: 0 8px;
+	position: relative !important;
+
+
+}
+
+select {
+    color: white;
+	float: left;
+
+	display: flex;
+	align-items: center;
+}
+
+select option {
+	margin: 40px;
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
+
+button {
+    color: hsla(var(--accent-color), 100%);
+	font-weight: 900;
+
+    margin-left: auto;
+
+	align-self: end;
+}
+
+*/
+
+/* 480 for mobile, search for an alternative, i know there was a display mobile wome */
+@media only screen and (max-width: 480px) {
+	.content {
+	  margin-bottom: var(--nav-height);
+	}
+
+	nav {
+		position: fixed;
+		bottom: 0;
+		z-index: 9999;
+	}
+
+.hide {display:none;} 
+}
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+/*
+In practice, many designers convert pixels to ems, largely because ems afford better zooming. 
+At standard zoom 1em === 16px, multiply pixels by 1em/16px to get ems. For example, 320px === 20em.
+
+In response to the comment, min-width is standard in "mobile-first" design, wherein you start by designing 
+for your smallest screens, and then add ever-increasing media queries, working your way onto larger and 
+larger screens.
+
+Regardless of whether you prefer min-, max-, or combinations thereof, 
+be cognizant of the order of your rules, keeping in mind that if multiple rules match the same element, 
+the later rules will override the earlier rules.
+
+https://stackoverflow.com/a/7354648
+
+
+
+note to me: read trough it
+https://web.dev/responsive-web-design-basics/
+*/

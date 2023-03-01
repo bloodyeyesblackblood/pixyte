@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" />   
+
+	<!-- Site Information -->
+	<title>Pixyte</title>
+	<link rel="manifest" href="manifest.json" />
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 x=%22-.14em%22 font-size=%2295%22>🌆️</text></svg>">
+	<meta name="description" content="Blogging, Open Source Apps for Windows/Android & much more.">
+	<meta name="keywords" content="Open Source, Ressource Friendly, Simplified Blog">
+	<meta name="author, publisher, copyright" content="bloodyeyesblackblood"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Mobile URL Header Color -->
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="aliceblue">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+	
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="src/css/style.css">  
+	</head><body><main>
+	
+		<nav role="navigation" class="flex nav-font">
+
+			<a class="home nav-link" href="#home" title="Home">P</a>
+
+				<form action="" method="get" class="search-container radius">
+					<input type="submit" id="search-submit" value="🔍️">
+					<input type="text" name="s" placeholder="Search" id="search-input" autocomplete="on" value="" accesskey="s">
+				</form>
+
+			<a class="notification nav-link radius" href="#notification" title="Notification">69</a>
+
+				<div class="nav-profile-container flex">
+					
+					<a class="flex" href="#profile" title="Profile"><img id="profile-pic-preview-z" src="src/img/blank.webp"></a>
+
+					<a class="flex hide" href="#menu" title="Menu">
+						<svg class="profile-dropdown radius" height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" fill="white" fill-opacity="1">
+							<path d="M12 19.5.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z">
+							</path>
+						</svg>
+					</a>
+
+				</div>
+				
+	</nav>
+
+
+
+	<div class="content">
+        <div class="box">
+            <a><img src="https://i.pinimg.com/originals/d7/99/f6/d799f6eb369b9651689d695c5d90a9fb.jpg"></a>
+        </div>
+
+        <div class="box">
+            <img src="https://i.pinimg.com/originals/42/b1/9c/42b19ceb8a5d209f42b72407e2a875a9.jpg">
+        <!-- i should rework this -->
+			<div id="hover-interface">
+
+				<div id="top">
+					<select>
+						<option>Dog</option>
+						<option>Cat</option>
+						<option>Rabbit</option>
+					</select>
+					<button>Save</button>
+				</div>
+
+				<div id="bottom">
+					<button>...</button>
+					<button>[show]</button>
+				</div>
+
+			</div>
+		</div>
+
+        <div class="box">
+            <img src="data:image/jpeg;base64,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">
+			
+			<div id="hover-interface">
+
+				<div id="top">
+				t
+				</div>
+
+				<div id="bottom">
+				b
+				</div>
+
+			</div>
+
+		</div>
+
+        <div class="box">
+            <img src="https://www.manime.de/wp-content/uploads/2020/06/hunterxhunterheader2.jpg">
+        </div>
+
+        <div class="box">
+            <img src="http://pm1.narvii.com/7565/a7910d33c083c0352a1943bd09a0d004345cd745r1-640-640v2_uhq.jpg">
+        </div>
+
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdswjfBx7udF5izvWk7a9yn3KmNDrSLNgAuA&usqp=CAU">
+        </div>
+
+        <div class="box">
+            <img src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_1000,h_667/https://www.pixinfocus.com/wp-content/uploads/2020/05/aesthetic-photography-3.jpg">
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPAAe0LVISXzseL3xO4s6pGkb0RlKFhma_Kg&usqp=CAU">
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4cFeszy6mEBdAdYL20-LwX2F7039Mf4HDDw&usqp=CAU">
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSRPKikH0XhJ9ewxv1zWRlQHN1t3DwlUP1Dw&usqp=CAU">
+        </div>
+
+   
+
+    </div>
+	
+
+	
+	
+	<!-- snippet for the profile pic upload 
+		
+	</main>
+		  <script>
+			  var loadFile = function(event) {
+				  var image = document.getElementById('profile-pic-preview');
+	
+				  image.src=URL.createObjectURL(event.target.files[0]);
+			  };
+		  </script>
+	
+	</body></html>
+
+	-->
+	
