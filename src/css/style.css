@@ -51,7 +51,7 @@
 
 	--n-font: 1rem;
 
-	--column-count: 6;
+	--column-count: 4;
 
 	--nav-height: 60px;
 }
@@ -173,7 +173,7 @@ nav #profile-pic-preview-z {
 }
   
 .content {
-    max-width: 100%;
+    max-width: 86%;
     margin: 0 auto;
     padding: 10px;
     display: block;
@@ -270,8 +270,13 @@ button {
 
 /* 480 for mobile, search for an alternative, i know there was a display mobile wome */
 @media only screen and (max-width: 480px) {
+	:root {
+		--column-count: 2;
+	}
+	
 	.content {
 	  margin-bottom: var(--nav-height);
+	  max-width: 100%;
 	}
 
 	nav {
