@@ -51,7 +51,7 @@
 
 	--n-font: 1rem;
 
-	--column-count: 4;
+	--column-count: 5;
 
 	--nav-height: 60px;
 }
@@ -173,7 +173,7 @@ nav #profile-pic-preview-z {
 }
   
 .content {
-    max-width: 86%;
+    max-width: 82%;
     margin: 0 auto;
     padding: 10px;
     display: block;
