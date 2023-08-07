@@ -1,0 +1,67 @@
+/* resets browser default styles */
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+font-size: 16px;
+font-family: Arial;
+} 
+
+
+/* unuglyfy links */
+a{text-decoration:none;}
+
+
+/* navigation styling */
+nav,nav a{display:flex;} 
+nav {
+border-bottom:1px solid hsla(0, 0%, 100%, 0.15);
+height: 60px;
+margin-bottom: 6px;
+background-color: red;
+}
+
+nav img,nav a{margin: auto 0;}
+nav .linked {
+align-items: center;
+height: calc(100% - .8rem);
+padding: 6px 12px;
+margin-left: 4px;
+font-weight: bold;
+color: white;
+}
+
+nav img {
+height: calc(100% - .8rem);
+padding: 6px;
+}
+
+.icon:hover{background-color:hsla(335,98%,63%,0.5);}
+nav .icon {
+margin-left: 10px;
+border-radius: 10em;
+}
+
+nav a:hover:not(#profile-menu) {
+background-color: hsla(335, 98%, 63%, 0.5);
+border-radius: 1.2em;    
+}
+
+#search {
+background-color: hsla(0, 0%, 100%, 0.1);
+border: none;
+border-radius: 20px;
+outline: none;
+padding: 10px 20px;
+margin: 8px;
+color: white;
+}
+
+#profile-menu{
+padding: 0;
+margin-right: 16px;
+}
+
+
