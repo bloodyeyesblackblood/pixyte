@@ -24,7 +24,7 @@ filesPHP.then((res) => {
                 <div class="bottom right button">ℹ️</div>
 
         </div>
-        <a href="#"><img src="./src/images/posts/${res[i]}" width="200" height="450" alt="autoloaded content">`;
+        <a href="#"><img src="./src/images/posts/${res[i]}" width="120" height="220" alt="autoloaded content">`;
         // <a href="#"><img src="//wsrv.nl/?url=https://wsrv.nl/?url=https://pin.bloodyeyes.xyz/src/images/posts/${res[i]}&output=webp&q=60$" width="200" height="450" alt="autoloaded content"`;
 
         document.getElementById("view-pictures").appendChild(div);

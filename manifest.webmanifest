@@ -1,0 +1,19 @@
+{
+    "lang": "en-us",
+    "name": "Pinify",
+    "short_name": "Pin",
+    "description": "pin, save, create, whatever.",
+    "start_url": "/",
+    "background_color": "#1c1c1c",
+    "theme_color": "#000000",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/pin.svg",
+            "type": "image/svg+xml",
+            "sizes": "any",
+            "purpose": "any"
+        }
+    ]
+}

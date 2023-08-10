@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Mobile First</title>
-    <link rel="icon" type="image/x-icon" href="/pin.svg">
+    <link rel="icon" type="image/x-icon" href="/src/site/pin.svg">
 
 	<!-- Mobile URL Header Color -->
 	<meta name="theme-color" media="(prefers-color-scheme: light)" content="aliceblue">
@@ -19,14 +19,14 @@
 </head> <body> 
 
 <nav id="nav-desktop">
-    <a href="index.html" alt="" ><img class="icon" src="/pin.svg" width="50" height="50" alt="website-logo"/></a>
+    <img class="icon" src="/src/site/pin.svg" width="50" height="50" alt="website-logo"/>
     <a href="#" alt="" class="linked">Explore</a> <a href="#" alt="" class="linked">Create</a>
 
     <form action="" method="get" class="search-form">
       <input id="search" type="text" name="search" placeholder="search">
     </form>
 
-    <a href="profile.html"><img class="" src="https://i.pinimg.com/236x/e7/a7/ec/e7a7ec3a7396bda47d1efa8a6a277081.jpg" width="50" height="50" alt="userprofile"x></a>
+    <a href="/profile" hx-push-url="true"><img class="" src="https://i.pinimg.com/236x/e7/a7/ec/e7a7ec3a7396bda47d1efa8a6a277081.jpg" width="50" height="50" alt="userprofile"x></a>
 
 
     <div class="dd-a"><span>☰</span></div>
@@ -35,7 +35,7 @@
     
 
     <ul class="dropdown">
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="">settings</a></li>
         <li><a href="">wogout ^-^</a></li>
     </ul>
 
@@ -45,34 +45,9 @@
 
 <main>
 
-<div class="profile-header">
-
-<div class="profile-header-pfp">
-    <img class="" src="https://i.pinimg.com/236x/e7/a7/ec/e7a7ec3a7396bda47d1efa8a6a277081.jpg" width="150" height="150" alt="userprofile">
-</div>
-
-<div class="profile-header-displayname">
-    <p>bwoodyeyesbwackbwood</p>
-</div>
-
-<div class="profile-header-username">
-    <p>@ghost</p>
-</div>
-
-<div class="profile-header-bio">
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elit</p>
-</div>
-
-<div class="profile-header-edit">
-<a href="#">edit profile</a>
-</div>
-
-</div>
 
 
-<div class="cato-list-top">
-<p>Sort</p> <p>+</p>
-</div>
+
 
 <div class="cato-list">
     <div class="cato-container">
@@ -99,15 +74,14 @@
 <div class="cato-list">
     <div class="cato-container">
         <div class="cato-container-images">
-            <img class="image1" src="https://i.pinimg.com/474x/a1/8a/7b/a18a7bf144bfc84a22d351328623f9c8.jpg" width="150" height="150" alt="userprofile">
-            <img class="image2" src="https://i.pinimg.com/236x/77/79/c6/7779c6e79a13e2bb9ece6a804867b437.jpg" width="150" height="150" alt="userprofile">
-            <img class="image3" src="https://i.pinimg.com/236x/07/89/b2/0789b2cf3d0569492b7e8c6ddcf5d05b.jpg" width="150" height="150" alt="userprofile">
+            <img class="image1" src="https://i.pinimg.com/474x/a1/8a/7b/a18a7bf144bfc84a22d351328623f9c8.jpg" width="150" height="150" alt="image 1 of your folder">
+            <img class="image2" src="https://i.pinimg.com/236x/77/79/c6/7779c6e79a13e2bb9ece6a804867b437.jpg" width="150" height="150" alt="image 2 of your folder">
+            <img class="image3" src="https://i.pinimg.com/236x/07/89/b2/0789b2cf3d0569492b7e8c6ddcf5d05b.jpg" width="150" height="150" alt="image 3 of your folder">
         </div>
-<div class="cato-title"><h2>aesthetics</h2></div>
-<div class="cato-title-view"><p>3 pins</p></div>
-</div>
+            <div class="cato-title"><h2>aesthetics</h2></div>
+            <div class="cato-title-view"><p>3 pins</p></div>
 
-
+    </div>
 
 </div>
 
@@ -115,20 +89,9 @@
 
 <style>
 
-
-.cato-list-top {
-display: flex;
-max-width: 100%;
-color: aliceblue;
-justify-content: space-between;
-margin: 0 20px;
-}
-
-
-
-
 :root {
     --grid-container-height: 220px;
+
 }
 
 .cato-list {
@@ -137,11 +100,12 @@ max-width: calc(100% - 12px);
 background-color: gray;
 }
 
-
 .cato-container {
+background-color: yellowgreen;
 float: left;
 margin: 8px;
 }
+
 
 .cato-container img {
 object-fit: cover;
@@ -169,16 +133,6 @@ max-height: var(--grid-container-height);
 
 
 
-.cato-title {
-  color: aliceblue;
-  padding-top: 10px;
-}
-
-.cato-title-view p {
-  color: rgb(207, 207, 207);
-  padding-top: 6px;
-  font-size: 12px;
-}
 
 
 
@@ -192,62 +146,6 @@ max-height: var(--grid-container-height);
 
 
 
-.profile-header {
-display: flex;
-flex-direction: column;
-align-items: center;
-height: auto;
-border-bottom:1px solid hsla(0, 0%, 100%, 0.15);
-margin-bottom: 10px;
-}
-
-.profile-header-pfp img {
-margin-top: 20px;
-border-radius: 3px;
-width: auto;
-display: block;
-margin-bottom: 10px;
-}
-
-
-.profile-header-bio {
-margin: 10px;
-max-width: 650px;
-line-height: calc(1ex / 0.42);
-text-align: justify;
-}
-
-.profile-header-bio, .profile-header-displayname, .profile-header-username {
-padding: 20px;
-color: aliceblue;
-background-color: black;
-border:2px solid hsla(0, 0%, 100%, 0.15);
-border-radius: 30px;
-}
-
-.profile-header-displayname {
-padding: 10px;
-font-weight: bolder;
-border: none;
-}
-
-.profile-header-username {
-margin-top: 6px;
-padding:8px 14px;
-color: aliceblue;
-
-
-}
-
-.profile-header-username p {
-font-size: 14px;
-
-
-}
-
-.profile-header-edit {
-margin-bottom: 14px;
-}
 
 
 </style>
@@ -255,14 +153,6 @@ margin-bottom: 14px;
 
 
 </main>
-
-<!-- change desktop nav to mobile nav later, should be easy, by hidin' 
-everything besides the icon and pfp, replace search with a global tab/explore tab? -->
-<nav id="nav-mobile">
-<div class="bottom-nav-button"><a href="index.html" alt="" class="linked">🏠</a></div>
-<div class="bottom-nav-button"><a href="#" alt="" class="linked">🌐</a></div>
-<div class="bottom-nav-button"><a href="profile.html" alt="" class="linked">📑</a></div>
-</nav>
 
 </body> 
 
