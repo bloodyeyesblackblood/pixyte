@@ -42,26 +42,48 @@
     
 </nav>
 
-<div id="catogories">
-<div class="cato-button active">aesthetics</div>
-<div class="cato-button">anime</div>
-<div class="cato-button">kitchen</div>
-<div class="cato-button">+</div>
-</div>
 
 <main>
 
-<!-- displays the pictures -->
-<div id="load-pins">
+<div class="profile-header">
 
-<!-- make sure to serve optimized pictures for the preview /
-"download" later on should download the original high-res. file -->
-<div id="view-pictures"></div>
+<div class="profile-header-pfp">
+    <img class="" src="https://i.pinimg.com/236x/e7/a7/ec/e7a7ec3a7396bda47d1efa8a6a277081.jpg" width="150" height="150" alt="userprofile">
+</div>
+
+<div class="profile-header-username">
+    <span>bwoodyeyesbwackbwood</span>
+</div>
+
+<div class="profile-header-bio"></div>
 </div>
 
 
 
+<style>
+.profile-header {
+display: flex;
+justify-content: center;
+height: 500px;
+background-color: red;
 
+}
+
+.profile-header-pfp {
+margin-top: 20px;
+border-radius: 12px;
+}
+
+.profile-header-pfp img {
+margin-top: 20px;
+border-radius: 3px;
+display: block;
+}
+
+
+
+
+</style>
 
 
 
@@ -76,6 +98,5 @@ everything besides the icon and pfp, replace search with a global tab/explore ta
 </nav>
 
 </body> 
-<script src="src/scripts/view.pic.js"></script>
 
 </html>

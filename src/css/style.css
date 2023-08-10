@@ -1,0 +1,110 @@
+/* resets browser default styles */
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+font-size: 16px;
+font-family: Arial;
+} 
+
+
+/* unuglyfy links */
+a{text-decoration:none;}
+
+
+/* navigation styling */
+nav,nav a{display:flex;} 
+nav {
+border-bottom:1px solid hsla(0, 0%, 100%, 0.15);
+height: 60px;
+margin-bottom: 6px;
+}
+
+nav img,nav a{margin: auto 0;}
+nav a {
+align-items: center;
+height: calc(100% - .8rem);
+padding: 6px 12px;
+margin-left: 4px;
+font-weight: bold;
+color: white;
+}
+
+nav img {
+height: calc(100% - .8rem);
+padding: 6px;
+}
+
+.icon:hover{background-color:hsla(335,98%,63%,0.5);}
+nav .icon {
+margin-left: 10px;
+border-radius: 10em;
+}
+
+nav a:hover:not(#profile-menu) {
+background-color: hsla(335, 98%, 63%, 0.5);
+border-radius: 1.2em;    
+}
+
+#search {
+background-color: hsla(0, 0%, 100%, 0.1);
+border: none;
+border-radius: 20px;
+outline: none;
+width: 100%;
+padding: 10px 20px;
+margin: 8px;
+color: white;
+}
+
+#profile-menu{
+padding: 0;
+margin-right: 16px;
+}
+
+
+/* media showcase styling */
+#view-pictures {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+grid-template-rows: masonry;
+gap: 10px;
+width: calc(100% - 18px);
+margin: 0 auto;
+}
+
+.picture-container {
+position: relative;
+border-radius: 2px;
+overflow: hidden;
+}
+
+.picture-container img {
+width: 100%;
+display: block;
+height:auto;
+}
+
+
+/* hover overlay for save features etc */
+.pic-overlay{display:none;}
+.picture-container:hover img{filter:brightness(40%);}
+.picture-container:hover > .pic-overlay {
+display: block;
+}
+
+.button {
+background-color: hsla(335, 98%, 63%, 0.5);
+padding: 10px;
+color: white;
+z-index:9999;
+position: absolute;
+}
+
+/* since the buttons are pos.:absolute; it does set those buttons to 
+their place, don't think it's the right approach, but works atm, might change later */
+.top{top:5px;}.bottom {bottom:5px;}.left{left:5px;}.right{right:5px;}
+
+

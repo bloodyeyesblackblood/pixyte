@@ -9,18 +9,154 @@ font-size: 16px;
 font-family: Arial;
 } 
 
-
 /* unuglyfy links */
 a{text-decoration:none;}
 
 
+/* nav dropdown */
+ul  {
+list-style: none;
+background-color: rgb(0, 0, 0);
+position: absolute;
+
+top:60px;
+display: none;
+border-bottom-left-radius: 10px;
+overflow: hidden;
+right:0 ;
+}
+
+ul li {
+display: inline-block;
+height: 100%;
+
+}
+
+ul li a {
+display: block;
+padding: 20px 25px;
+color: #fff;
+  border-radius:0 !important;
+}
+
+
+
+#profile-menu:checked ~ ul{
+    display: block;
+
+}
+
+
+.dropdown li {
+
+    width: 100%;
+}
+
+#profile-menu {
+  opacity:0;
+  display:block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background: hsl(0, 100%, 50%)(155, 89, 89) !important;
+  height:100%;
+  width: 30px;
+
+
+}
+
+
+.dd-a {
+  color: white;
+
+ display:flex;
+margin-right: 18px;
+  align-items: center;
+
+   height:100%;
+
+}
+
+#profile-menu:hover {
+  cursor:pointer;
+    background-color: red !important;
+}
+
+
+/* catogories */
+#catogories {
+    display: flex;
+    height: auto;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.cato-button {
+    background-color: hsl(0, 0%, 22%);
+    color: aliceblue;
+    padding: 8px 10px;
+    margin-left: 6px;
+    border-radius: 10px;
+    }
+
+.active {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(335, 98%, 63%);
+    border: 2px solid;
+}
+
+/* mobile navigation styling */
+#nav-mobile {
+display: none;
+}
+
+@media only screen and (max-width: 560px) {
+
+    nav {
+    height: 80px !important;
+    }
+
+    #nav-desktop {
+        display: none;
+    }
+
+    #nav-mobile {
+
+        display: flex;
+        position: sticky;
+        bottom: 0;
+       justify-content: space-evenly;
+        width: 100%;
+        z-index: 9999;
+    }
+
+
+    #nav-mobile a {
+
+        height: 100%;
+        border-radius: 0;
+        width: 100%;
+
+    }
+}
+
 /* navigation styling */
+#nav-desktop {
+z-index: 9999;
+position: sticky;
+top: 0;
+}
+
+
 nav,nav a{display:flex;} 
 nav {
+background-color:hsl(0,0%,3%);
 border-bottom:1px solid hsla(0, 0%, 100%, 0.15);
 height: 60px;
 margin-bottom: 6px;
-background-color: red;
 }
 
 nav img,nav a{margin: auto 0;}
@@ -46,22 +182,65 @@ border-radius: 10em;
 
 nav a:hover:not(#profile-menu) {
 background-color: hsla(335, 98%, 63%, 0.5);
-border-radius: 1.2em;    
+border-radius: 4px;    
 }
 
 #search {
-background-color: hsla(0, 0%, 100%, 0.1);
+background-color: hsla(0,0%,100%,.1);
 border: none;
+color: white;
 border-radius: 20px;
-outline: none;
 padding: 10px 20px;
 margin: 8px;
+width: 100%;
+}
+
+.search-form {
+width: 100%;
+display: flex;
+}
+
+
+
+
+/* media showcase styling */
+#view-pictures {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-template-rows: masonry;
+gap: 10px;
+width: calc(100% - 18px);
+margin: 0 auto;
+}
+
+.picture-container {
+position: relative;
+border-radius: 2px;
+overflow: hidden;
+}
+
+.picture-container img {
+width: 100%;
+display: block;
+height:auto;
+}
+
+
+/* hover overlay for save features etc */
+.pic-overlay{display:none;}
+.picture-container:hover img{filter:brightness(40%);}
+.picture-container:hover > .pic-overlay {
+display: block;
+}
+
+.button {
+background-color: hsla(335, 98%, 63%, 0.5);
+padding: 10px;
 color: white;
+z-index:999;
+position: absolute;
 }
 
-#profile-menu{
-padding: 0;
-margin-right: 16px;
-}
-
-
+/* since the buttons are pos.:absolute; it does set those buttons to 
+their place, don't think it's the right approach, but works atm, might change later */
+.top{top:5px;}.bottom {bottom:5px;}.left{left:5px;}.right{right:5px;}
